@@ -74,3 +74,13 @@ Summe: € 29,99
 
 - [20x4-Zeichen-Display](https://www.amazon.de/gp/product/B07QNKCLJM/ref=ppx_yo_dt_b_asin_title_o00_s00?ie=UTF8&psc=1): € 12,99
 - [OLED-Display](https://www.amazon.de/gp/product/B078J78R45/ref=as_li_ss_tl?ie=UTF8&psc=1&linkCode=sl1&tag=splittitde-21&linkId=52f29b26591306b53816fc80fc11fe12&language=de_DE): € 7,29
+
+## Gehäuse
+
+- [Holzkiste mit Deckel (14x20x30)](https://www.obi.de/aufbewahrungsboxen/kesper-allzweckkiste-kiefer-mit-deckel-8-4-l/p/2715670): € 8,49
+- [Holzschachtel (23x11x9)](https://www.amazon.de/dp/B00A7X1OJG/ref=twister_B072XR8H28?_encoding=UTF8&psc=1): € 9,77
+- [Holzkiste (16x16x16)](https://www.amazon.de/dp/B07F1PV3RN/ref=sspa_dk_detail_5?psc=1&pd_rd_i=B07F1PV3RN&pd_rd_w=LsVcT&pf_rd_p=80f139ed-36cd-4376-aa65-33f3cf0faca3&pd_rd_wg=7Z2Di&pf_rd_r=Y2Q22DHDQNHFK1HDTEEM&pd_rd_r=8d71efaa-84df-4e7e-8d82-cd58cf4ac656&spLa=ZW5jcnlwdGVkUXVhbGlmaWVyPUEzRTA0NjRBRjNISkNHJmVuY3J5cHRlZElkPUEwODY0NjI0MkY4RElTWU0xTDhBVyZlbmNyeXB0ZWRBZElkPUEwNTk4NzQ4MjZXWFpOMkY0VUVaNSZ3aWRnZXROYW1lPXNwX2RldGFpbCZhY3Rpb249Y2xpY2tSZWRpcmVjdCZkb05vdExvZ0NsaWNrPXRydWU=): € 18,95
+- [Stromanschluss](https://www.amazon.de/DeLock-Micro-B-Buchse-Einbau-Stecker/dp/B0754MNQPN/ref=rtpb_2?pd_rd_w=iOUMz&pf_rd_p=8f9f5e17-6b9f-4a72-b87c-c49f7bcd05fb&pf_rd_r=Y65CRKX1NKHM0XM11MJA&pd_rd_r=ca9df7c7-0957-4518-98b7-b5b6faa3823f&pd_rd_wg=86w0i&pd_rd_i=B0754MNQPN&psc=1): € 6,30
+- [Stromverlängerung](https://www.amazon.de/SunshineTronic-Verl%C3%A4ngerungskabel-beschaltet-geschirmt-Winkel-Stecker/dp/B0016SJ3IA/ref=sr_1_7?__mk_de_DE=%C3%85M%C3%85%C5%BD%C3%95%C3%91&dchild=1&keywords=micro+usb+verl%C3%A4ngerung&qid=1616162800&s=ce-de&sr=1-7): € 3,50 (2 Stück für € 6,99)
+- Schloss
+- Griff
