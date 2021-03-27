@@ -1,8 +1,8 @@
 Use               | Pin Name          | Pin Number | Pin Number | Pin Name           | Use
 :-----------------|:------------------|:----------:|:----------:|:-------------------|:---
 OnOffShim         | 3V3 (Power)       |      1     |      2     | 5V (Power)         | OnOffShim
-OLED              | GPIO2 (SDA I2C)   |      3     |      4     | 5V (Power)         | OnOffShim
-OLED              | GPIO3 (SCL I2C)   |      5     |      6     | Ground             | Available
+OLED              | GPIO2 (SDA I2C)   |      3     |      4     | 5V (Power)         | OnOffShim / OLED
+OLED              | GPIO3 (SCL I2C)   |      5     |      6     | Ground             | OLED
 OnOffShim         | GPIO4             |      7     |      8     | SPIO14 (UART0 TXD) | Available
 Available         | Ground            |      9     |     10     | GPIO15 (UART0 RXD) | Available
 OnOffShim         | GPIO17            |     11     |     12     | GPIO18             | HifiBerry MiniAmp
