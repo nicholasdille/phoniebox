@@ -4,11 +4,11 @@ OnOffShim         | 3V3 (Power)       |      1     |      2     | 5V (Power)    
 OLED              | GPIO2 (SDA I2C)   |      3     |      4     | 5V (Power)         | OnOffShim / OLED
 OLED              | GPIO3 (SCL I2C)   |      5     |      6     | Ground             | OLED
 OnOffShim         | GPIO4             |      7     |      8     | SPIO14 (UART0 TXD) | Available
-Available         | Ground            |      9     |     10     | GPIO15 (UART0 RXD) | Available
+Poti GND         | Ground            |      9     |     10     | GPIO15 (UART0 RXD) | Available
 OnOffShim         | GPIO17            |     11     |     12     | GPIO18             | HifiBerry MiniAmp
-Available         | GPIO27            |     13     |     14     | Ground             | Previous song
-Available         | GPIO22            |     15     |     16     | GPIO23             | Previous song
-Reserved          | 3V3 (Power)       |     17     |     18     | GPIO24             | Available
+Poti CLK         | GPIO27            |     13     |     14     | Ground             | Previous song
+Poti DT         | GPIO22            |     15     |     16     | GPIO23             | Previous song
+Poti +          | 3V3 (Power)       |     17     |     18     | GPIO24             | Available
 Available         | GPIO10 (SPI MISO) |     19     |     20     | Ground             | Play/pause
 Available         | GPIO9 (SPI MISO)  |     21     |     22     | GPIO25             | Play/pause
 Available         | GPIO11 (SPI SCLK) |     23     |     24     | GPIO8 (SPI CE0)    | Available
@@ -25,3 +25,4 @@ Quellen:
 - [HifiBerry MiniAmp](https://www.hifiberry.com/docs/hardware/gpio-usage-of-hifiberry-boards/)
 - [OLED](https://cdn.shopify.com/s/files/1/1509/1638/files/0-96_inch_OLED_I2C_Display_-_pinout.pdf)
 - [OnOffShim](https://de.pinout.xyz/pinout/onoff_shim#)
+- [Potentiometer] (https://github.com/MiczFlor/RPi-Jukebox-RFID/wiki/Audio-RotaryKnobVolume) 
