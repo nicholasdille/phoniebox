@@ -13,3 +13,7 @@ wget https://raw.githubusercontent.com/splitti/oled_phoniebox/master/scripts/ins
 chmod +x o4p_installer.sh
 ./o4p_installer.sh
 ```
+
+TODO: answers
+
+The installer replaces the service for GPIO handling. Instead of `gpio_settings.ini` you must now use [`gpio-buttons.py`}(gpio-buttons.py).
