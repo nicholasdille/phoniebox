@@ -15,7 +15,7 @@ ODER
 ## Gemeinsam
 
 - [Speicherkarte](https://www.amazon.de/gp/product/B073JWXGNT/ref=ppx_yo_dt_b_asin_title_o02_s01): € 5,99
-- [OnOffShim](https://www.reichelt.de/raspberry-pi-shield-onoff-shim-rpi-shd-onoff-p272023.html) 
+- [OnOffShim](https://www.reichelt.de/raspberry-pi-shield-onoff-shim-rpi-shd-onoff-p272023.html): € 7,99
 - [PowerBank 20.000mAh](https://www.amazon.de/gp/product/B01422TC14/ref=ox_sc_act_title_3): € 30,99
 
   (Achtung: Pass-through muss unterstützt werden, damit gleichzeitiger Input und Output möglich ist!)
