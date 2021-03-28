@@ -6,4 +6,4 @@ Install the [daemon](https://github.com/pimoroni/clean-shutdown):
 curl https://get.pimoroni.com/onoffshim | bash
 ```
 
-TODO: LED
+Connect the power LED to pin 8 (TxD) and pin 6 (GND) with a 330 ohm resistor.
