@@ -20,3 +20,7 @@ audio_output {
         mixer_type "software"
 }
 ```
+
+## Mopidy-Iris is unable to communicate with Spotify
+
+Make sure that Raspberry OS waits for the network before booting using `raspi-config`.
