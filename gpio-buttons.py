@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-from gpiozero import Button
+from gpiozero import Button, RotaryEncoder
 from signal import pause
 from subprocess import check_call
 from time import sleep
@@ -73,16 +73,15 @@ def def_halt():
 def toggle_display():
     check_call("/home/pi/oled_phoniebox/scripts/toggle_display/toggle_display.sh", shell=True)
 
-#btn_shut = Button(3, hold_time=2)
-#btn_vol0 = Button(21,pull_up=True)
+btn_vol0 = Button(8,pull_up=True)
 #btn_volup = Button(7,pull_up=True,hold_time=0.3,hold_repeat=True)
-#btn_voldown = Button(13,pull_up=True,hold_time=0.3,hold_repeat=True)
+#btn_voldown = Button(5,pull_up=True,hold_time=0.3,hold_repeat=True)
 btn_next = Button(12,pull_up=True,hold_time=2.0,hold_repeat=False)
 btn_prev = Button(23,pull_up=True,hold_time=2.0,hold_repeat=False)
 btn_halt = Button(25,pull_up=True,hold_time=2.0,hold_repeat=False)
+rotor = RotaryEncoder(7, 5)
 
-#btn_shut.when_held = def_shutdown
-#btn_vol0.when_pressed = def_vol0
+btn_vol0.when_pressed = def_vol0
 #btn_volup.when_pressed = def_volU
 #When the Volume Up button was held for more than 0.3 seconds every 0.3 seconds he will call a ra$
 #btn_volup.when_held = def_volU
@@ -95,5 +94,7 @@ btn_prev.when_pressed = def_prev
 btn_prev.when_held = def_contrastdown
 btn_halt.when_pressed = def_halt
 btn_halt.when_held = toggle_display
+rotor.when_rotated_clockwise = def_volU
+rotor.when_rotated_counter_clockwise = def_volD
 
 pause()
