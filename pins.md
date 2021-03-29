@@ -14,7 +14,7 @@ Available         | GPIO9 (SPI MISO)  |     21     |     22     | GPIO25        
 Available         | GPIO11 (SPI SCLK) |     23     |     24     | GPIO8 (SPI CE0)    | Poti Button (SWD) 
 Volume up         | Ground            |     25     |     26     | GPIO7 (SPI CE1)    | Volume up / Poti CLK
 Reserved          | ID SD (I2C ID)    |     27     |     28     | ID SC (I2C ID)     | Reserved
-Volume down / Poti DT         | GPIO5             |     29     |     30     | Volume down             | Available
+Volume down / Poti DT         | GPIO5             |     29     |     30     | Ground             | Volume down
 Available         | GPIO6             |     31     |     32     | GPIO12             | Next song
 Available         | GPIO13            |     33     |     34     | Ground             | Next song
 HifiBerry MiniAmp | GPIO19            |     35     |     36     | GPIO16             | HifiBerry MiniAmp
