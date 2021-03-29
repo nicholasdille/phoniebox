@@ -9,6 +9,7 @@ Notes
 1. [MiniAmp](miniamp.md)
 1. [GPIO](gpio.md)
 1. [OLED](oled.md)
+1. [Misc](misc.md)
 
 ## Shopping list
 
