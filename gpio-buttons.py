@@ -73,11 +73,17 @@ def def_halt():
 def toggle_display():
     check_call("/home/pi/oled_phoniebox/scripts/toggle_display/toggle_display.sh", shell=True)
 
+def def_seekahead():
+    check_call(jukebox4kidsPath+"/scripts/playout_controls.sh -c=playerseek -v=+20", shell=True)
+
+def def_seekback():
+    check_call(jukebox4kidsPath+"/scripts/playout_controls.sh -c=playerseek -v=-20", shell=True)
+
 btn_vol0 = Button(8,pull_up=True)
 #btn_volup = Button(7,pull_up=True,hold_time=0.3,hold_repeat=True)
 #btn_voldown = Button(5,pull_up=True,hold_time=0.3,hold_repeat=True)
-btn_next = Button(12,pull_up=True,hold_time=2.0,hold_repeat=False)
-btn_prev = Button(23,pull_up=True,hold_time=2.0,hold_repeat=False)
+btn_next = Button(12,pull_up=True,hold_time=1.0,hold_repeat=True)
+btn_prev = Button(23,pull_up=True,hold_time=1.0,hold_repeat=True)
 btn_halt = Button(25,pull_up=True,hold_time=2.0,hold_repeat=False)
 rotor = RotaryEncoder(7, 5)
 
@@ -89,9 +95,9 @@ btn_vol0.when_pressed = def_vol0
 #When the Volume Down button was held for more than 0.3 seconds every 0.3 seconds he will lower t$
 #btn_voldown.when_held = def_volD
 btn_next.when_pressed = def_next
-btn_next.when_held = def_contrastup
+btn_next.when_held = def_seekahead
 btn_prev.when_pressed = def_prev
-btn_prev.when_held = def_contrastdown
+btn_prev.when_held = def_seekback
 btn_halt.when_pressed = def_halt
 btn_halt.when_held = toggle_display
 rotor.when_rotated_clockwise = def_volU
