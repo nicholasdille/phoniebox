@@ -25,7 +25,7 @@ HifiBerry MiniAmp     | GPIO19            |     35     |     36     | GPIO16    
 HifiBerry MiniAmp     | GPIO26            |     37     |     38     | GPIO20             | HifiBerry MiniAmp
 Available             | Ground            |     39     |     40     | GPIO21             | HifiBerry MiniAmp
 
-It is recommended to use an extension board so unused pins are accessible when using [HifiBerry MiniAMP](hifiberry.md) and [OnOffShim](onoffshim.md).
+It is recommended to use an extension board so unused pins are accessible when using [HifiBerry MiniAMP](miniamp.md) and [OnOffShim](onoffshim.md).
 
 Quellen:
 - [HifiBerry MiniAmp](https://www.hifiberry.com/docs/hardware/gpio-usage-of-hifiberry-boards/)
