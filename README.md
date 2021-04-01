@@ -11,6 +11,13 @@ Notes
 1. [OLED](oled.md)
 1. [Misc](misc.md)
 
+## Todo
+
+- Idle shutdown
+- Auto update (including Phoniebox?) 
+- Connect BT headphones
+- Connect to new Wi-Fi networks
+
 ## Shopping list
 
 - [Raspberry Pi 3](https://www.amazon.de/Raspberry-1373331-Modell-Mainboard-1GB/dp/B07BFH96M3/ref=sr_1_4): € 46,07
