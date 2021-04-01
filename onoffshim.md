@@ -7,7 +7,7 @@ Check the [pinout](https://de.pinout.xyz/pinout/onoff_shim#) which pins are used
 Install the [daemon](https://github.com/pimoroni/clean-shutdown):
 
 ```bash
-curl https://get.pimoroni.com/onoffshim | bash
+curl https://get.pimoroni.com/cleanshutdown | bash
 ```
 
 ... and reboot.
