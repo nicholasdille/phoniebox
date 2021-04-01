@@ -1,6 +1,6 @@
 # OnOffShim
 
-Check the [pinout](https://de.pinout.xyz/pinout/onoff_shim#) which pins are used by the OnOffShim.
+Check the [pinout](pins.md) which pins are used by the OnOffShim.
 
 ## Enable power down using the button
 
