@@ -1,9 +1,9 @@
 # HifiBerry MiniAmp
 
-Editieren von `/boot/config.txt`:
+Editieren von `/boot/firmware/config.txt`:
 
 ```bash
-$ sudo vi /boot/config.txt
+$ sudo vi /boot/firmware/config.txt
 ```
 
 Dort müssen folgende Zeilen enthalten sein:
@@ -27,7 +27,7 @@ pcm.hifiberry {
     slave.pcm "plughw:0"
     control.name "Master"
     control.card 0
-} 
+}
 pcm.!default {
     type plug
     slave.pcm "hifiberry"

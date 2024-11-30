@@ -7,14 +7,14 @@ Check the [pinout](pins.md) which pins are used by the OnOffShim.
 Install the [daemon](https://github.com/pimoroni/clean-shutdown):
 
 ```bash
-curl https://get.pimoroni.com/cleanshutdown | bash
+curl https://get.pimoroni.com/onoffshim | bash
 ```
 
 ... and reboot.
 
 ## Power LED
 
-Enable the GPIO serial port by adding the following line to `/boot/config.txt`:
+Enable the GPIO serial port by adding the following line to `/boot/firmware/config.txt`:
 
 ```
 enable_uart=1
