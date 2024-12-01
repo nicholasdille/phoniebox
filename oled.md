@@ -24,4 +24,5 @@ Enable i2c: Add the following lines to `/boot/firmware/config.txt`
 dtparam=i2c_arm=on
 dtparam=spi=off
 dtparam=i2c1=on
+dtparam=i2c_arm_baudrate=400000
 ```
