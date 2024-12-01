@@ -21,3 +21,12 @@ enable_uart=1
 ```
 
 Connect the power LED to pin 8 (TxD) and pin 6 (GND) with a 330 ohm resistor.
+
+Configure `cleanshutd` in `/etc/cleanshutd.conf`:
+
+```plaintext
+#daemon_active=1
+trigger_pin=17                                                                               #led_pin=off                                                                      poweroff_pin=4
+#hold_time=1                                                                                 #shutdown_delay=0
+#polling_rate=1
+```
