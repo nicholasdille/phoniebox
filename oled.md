@@ -14,6 +14,6 @@ chmod +x o4p_installer.sh
 ./o4p_installer.sh
 ```
 
-TODO: answers
+Model: SH1106
 
 The installer replaces the service for GPIO handling. Instead of `gpio_settings.ini` you must now use [`gpio-buttons.py`](gpio-buttons.py).
