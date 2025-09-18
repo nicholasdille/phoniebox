@@ -31,4 +31,4 @@ Quellen:
 - [HifiBerry MiniAmp](https://www.hifiberry.com/docs/hardware/gpio-usage-of-hifiberry-boards/)
 - [OLED](https://cdn.shopify.com/s/files/1/1509/1638/files/0-96_inch_OLED_I2C_Display_-_pinout.pdf)
 - [OnOffShim](https://de.pinout.xyz/pinout/onoff_shim#)
-- [Potentiometer] (https://github.com/MiczFlor/RPi-Jukebox-RFID/wiki/Audio-RotaryKnobVolume)
+- [Potentiometer](https://github.com/MiczFlor/RPi-Jukebox-RFID/wiki/Audio-RotaryKnobVolume)
