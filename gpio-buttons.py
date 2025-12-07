@@ -2,7 +2,7 @@
 from gpiozero import Button, RotaryEncoder
 from signal import pause
 from subprocess import check_call
-from time import sleep
+from time import sleep, time
 
 # This script will block any I2S DAC e.g. from Hifiberry, Justboom, ES9023, PCM5102A
 # due to the assignment of GPIO 19 and 21 to a buttons
@@ -21,20 +21,44 @@ from time import sleep
 # If anybody has ideas or tests or experience regarding this solution, please create pull requests or contact me.
 
 jukebox4kidsPath = "/home/pi/RPi-Jukebox-RFID"
+ignoreEventSeconds = 1.5
+haltPressEpoch = time() - 5
+nextPressEpoch = time() - 5
+prevPressEpoch = time() - 5
 
 def def_shutdown():
     check_call(jukebox4kidsPath+"/scripts/playout_controls.sh -c=shutdown", shell=True)
 
 def def_volU():
-    check_call(jukebox4kidsPath+"/scripts/playout_controls.sh -c=volumeup", shell=True)
+    if rotorModeVolume == True:
+        check_call(jukebox4kidsPath+"/scripts/playout_controls.sh -c=volumeup", shell=True)
+    else:
+        check_call(jukebox4kidsPath+"/scripts/playout_controls.sh -c=playernext", shell=True)
 
 def def_volD():
-    check_call(jukebox4kidsPath+"/scripts/playout_controls.sh -c=volumedown", shell=True)
-
+    if rotorModeVolume == True:
+        check_call(jukebox4kidsPath+"/scripts/playout_controls.sh -c=volumedown", shell=True)
+    else:
+        #check_call(jukebox4kidsPath+"/scripts/playout_controls.sh -c=playerprev", shell=True)
+        check_call(jukebox4kidsPath+"/scripts/playout_controls.sh -c=playerpause", shell=True)
+        
 def def_vol0():
     check_call(jukebox4kidsPath+"/scripts/playout_controls.sh -c=mute", shell=True)
 
+def def_mode():
+    global rotorModeVolume
+    rotorModeVolume = not rotorModeVolume
+    if rotorModeVolume == True:
+        print("volume")
+    else:
+        print("halt/next")
+
 def def_next():
+    global nextPressEpoch
+    #print("### nextPressEpoch={:f} time={:f}".format(nextPressEpoch, time()))
+    if (time() - nextPressEpoch) < ignoreEventSeconds:
+        return
+    nextPressEpoch = time()
     for x in range(0, 19):
         if btn_next.is_pressed == True :
             sleep(0.1)
@@ -55,6 +79,11 @@ def def_contrastdown():
         check_call("/usr/bin/python3 /home/pi/oled_phoniebox/scripts/contrast/contrast_down.py", shell=True)
 
 def def_prev():
+    global prevPressEpoch
+    #print("### prevPressEpoch={:f} time={:f}".format(prevPressEpoch, time()))
+    if (time() - prevPressEpoch) < ignoreEventSeconds:
+        return
+    prevPressEpoch = time()
     for x in range(0, 19):
         if btn_prev.is_pressed == True :
             sleep(0.1)
@@ -63,6 +92,11 @@ def def_prev():
             break
 
 def def_halt():
+    global haltPressEpoch
+    #print("### haltPressEpoch={:f} time={:f}".format(haltPressEpoch, time()))
+    if (time() - haltPressEpoch) < ignoreEventSeconds:
+        return
+    haltPressEpoch = time()
     for x in range(0, 19):
         if btn_halt.is_pressed == True :
             sleep(0.1)
@@ -80,12 +114,14 @@ def def_seekback():
     check_call(jukebox4kidsPath+"/scripts/playout_controls.sh -c=playerseek -v=-20", shell=True)
 
 # Rotary knob
-#rotor = RotaryEncoder(7, 5)
-#rotor.when_rotated_clockwise = def_volU
-#rotor.when_rotated_counter_clockwise = def_volD
+rotorModeVolume = True
+rotor = RotaryEncoder(7, 5)
+rotor.when_rotated_clockwise = def_volU
+rotor.when_rotated_counter_clockwise = def_volD
 # Rotary knob button
-#btn_vol0 = Button(8,pull_up=True)
-#btn_vol0.when_pressed = def_vol0
+btn_vol0 = Button(8,pull_up=True)
+btn_vol0.when_pressed = def_vol0
+#btn_vol0.when_pressed = def_mode
 
 # Volume buttons
 #btn_volup = Button(7,pull_up=True,hold_time=0.3,hold_repeat=True)
@@ -98,15 +134,15 @@ def def_seekback():
 btn_next = Button(12,pull_up=True,hold_time=1.0,hold_repeat=True)
 btn_next.when_pressed = def_next
 #btn_next.when_held = def_contrastup
-btn_next.when_held = def_seekahead
+#btn_next.when_held = def_seekahead
 
 btn_prev = Button(23,pull_up=True,hold_time=1.0,hold_repeat=True)
 btn_prev.when_pressed = def_prev
 #btn_prev.when_held = def_contrastdown
-btn_prev.when_held = def_seekback
+#btn_prev.when_held = def_seekback
 
 btn_halt = Button(25,pull_up=True,hold_time=2.0,hold_repeat=False)
 btn_halt.when_pressed = def_halt
-btn_halt.when_held = toggle_display
+#btn_halt.when_held = toggle_display
 
 pause()
